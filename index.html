@@ -15,18 +15,30 @@
 
     .container {
       display: inline-flex;
+      margin: 10em;
     }
     .columns {
       flex-grow: 1;
+      padding: 10px;
+    }
+    .col-image img {
+      width: 100%;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 1px 1px;
+      grid-template-areas: ". . .";
+    }
+    .avatar img {
+      width: 100%;
+      border-radius: 100px;
+    }
+    .avatar-infomation {
+      text-align: left;
     }
 
-  .grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". . .";
-}
   </style>
 </head>
 <body>
