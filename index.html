@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | Article preview component</title>
 
@@ -13,20 +14,39 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
+    body {
+      font-family: 'Manrope', sans-serif;
+      background-color: #edf2f8;
+    }
+    h2, h3, small {
+      color: #4a5061;
+    }
+    p {
+      color: #4a5061;
+    }
+
     .container {
       display: inline-flex;
-      margin: 10em;
+      /* margin: 10em; */
+      background-color: #fff;
     }
     .columns {
       flex-grow: 1;
-      padding: 10px;
+      padding-right: 20px;
     }
-    .col-image img {
+    .col-image {
       width: 100%;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      /* background-image: url("./images/drawers.jpg"); */
+    }
+
+    .col-image img {
+      width: 100%
     }
     .grid-container {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
       grid-template-rows: 1fr;
       gap: 1px 1px;
       grid-template-areas: ". . .";
