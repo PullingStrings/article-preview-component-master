@@ -17,39 +17,45 @@
     body {
       font-family: 'Manrope', sans-serif;
       background-color: #edf2f8;
+      font-size: 13px;
     }
     h2, h3, small {
       color: #4a5061;
+      margin: 0;
     }
     p {
       color: #4a5061;
     }
-
     .container {
       display: inline-flex;
-      /* margin: 10em; */
       background-color: #fff;
+      width: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
     }
     .columns {
       flex-grow: 1;
-      padding-right: 20px;
+      padding: 20px;
     }
     .col-image {
       width: 100%;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-      /* background-image: url("./images/drawers.jpg"); */
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-image: url("./images/drawers.jpg");
+      background-size: cover;
     }
-
     .col-image img {
-      width: 100%
+      width: 100%;
     }
     .grid-container {
-      display: grid;
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-rows: 1fr;
-      gap: 1px 1px;
-      grid-template-areas: ". . .";
+      display: flex;
+    }
+    .avatar {
+      width: 10%;
     }
     .avatar img {
       width: 100%;
@@ -57,16 +63,16 @@
     }
     .avatar-infomation {
       text-align: left;
+      flex-grow: 4;
     }
-
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="columns">
-      <div class="col-image">
-        <img src="./images/drawers.jpg" alt="drawers">
+    <div class="col-image">
+      <div class="columns">
+      <!-- <img src="./images/drawers.jpg" alt="drawers"> -->
       </div>
     </div>
     <div class="columns">
