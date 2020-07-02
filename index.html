@@ -24,7 +24,7 @@
       margin: 0;
     }
     p {
-      color: #4a5061;
+      color: #b1b5be;
     }
     .container {
       display: inline-flex;
@@ -68,6 +68,7 @@
     }
     .avatar-infomation small {
       font-weight: 500;
+      color: #b1b5be;
     }
     .share img {
       background-color: #eaf1f9;
@@ -101,11 +102,19 @@
           <small>28 Jun 2020</small>
         </div>
         <div class="share">
-          <img src="./images/icon-share.svg" alt="share icon">
+          <img onclick="shareIcon()" src="./images/icon-share.svg" alt="share icon">
+          <p id="demo"></p>
         </div>
       </div>
     </div>
   </div>
+
+<script>
+    function shareIcon() {
+      document.getElementById("demo").innerHTML = Date();
+    }
+    
+</script>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
