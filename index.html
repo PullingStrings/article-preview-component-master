@@ -70,10 +70,44 @@
       font-weight: 500;
       color: #b1b5be;
     }
+
+    .speech-bubble img {
+      padding: 12px 9px;
+    }
+    .speech-bubble p {
+      letter-spacing: 3px;
+    }
+
+    .speech-bubble {
+    	position: relative;
+    	background: #49556b;
+    	border-radius: .4em;
+      padding: 0px 5px;
+      display: flex;
+      left: 100px;
+      bottom: 90px;
+    }
+
+    .speech-bubble:after {
+    	content: '';
+    	position: absolute;
+    	bottom: 1px;
+    	left: 50%;
+    	width: 0;
+    	height: 0;
+    	border: 20px solid transparent;
+    	border-top-color: #49556b;
+    	border-bottom: 0;
+    	border-left: 0;
+    	margin-left: -10px;
+    	margin-bottom: -20px;
+    }
+
+    .share {
+      color: #fff;
+    }
     .share img {
-      background-color: #eaf1f9;
-      border-radius: 20px;
-      padding: 10px;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -101,10 +135,15 @@
           <h3>Michelle Appleton</h3>
           <small>28 Jun 2020</small>
         </div>
-        <div class="share">
-          <img onclick="shareIcon()" src="./images/icon-share.svg" alt="share icon">
-          <p id="demo"></p>
-        </div>
+          <div class="speech-bubble">
+            <p>Share</p>
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter">
+          </div>
+          <div class="share">
+            <img onclick="shareIcon()" src="./images/icon-share.svg" alt="share icon">
+          </div>
       </div>
     </div>
   </div>
@@ -113,7 +152,7 @@
     function shareIcon() {
       document.getElementById("demo").innerHTML = Date();
     }
-    
+
 </script>
 
   <div class="attribution">
