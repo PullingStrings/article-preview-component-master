@@ -79,13 +79,15 @@
     }
 
     .speech-bubble {
-    	position: relative;
+    	position: absolute;
     	background: #49556b;
     	border-radius: .4em;
       padding: 0px 5px;
+      left: 28rem;
       display: flex;
-      left: 100px;
       bottom: 90px;
+      width: 50%;
+      justify-content: center;
     }
 
     .speech-bubble:after {
@@ -98,16 +100,66 @@
     	border: 20px solid transparent;
     	border-top-color: #49556b;
     	border-bottom: 0;
-    	border-left: 0;
     	margin-left: -10px;
-    	margin-bottom: -20px;
+    	margin-bottom: -15px;
     }
 
     .share {
       color: #fff;
+      background-color: #edf2f8;
+      padding: 13px;
+      border-radius: 20px;
     }
-    .share img {  
-      border-radius: 5px;
+
+      /* @media (max-width: 375px) {
+        .container {
+          display: table;
+          width: 90%;
+        }
+        .col-image {
+          border-bottom-left-radius: 0px;
+          border-top-right-radius: 10px;
+          height: 15rem;
+        }
+        .speech-bubble {
+          width: 100%;
+          display: flex;
+          left: 0rem;
+          bottom: 0;
+          border-radius: 0px;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+        .speech-bubble::after{
+          display: none;
+        }
+      } */
+    @media (max-width: 425px) {
+      .container {
+        display: table;
+        width: 90%;
+      }
+      .col-image {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        height: 15rem;
+      }
+      .speech-bubble {
+        width: 100%;
+        display: flex;
+        left: 0rem;
+        bottom: 0;
+        border-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 0px 0px;
+      }
+      .speech-bubble::after{
+        display: none;
+      }
+      .columns {
+        padding: 45px 30px;
+      }
     }
   </style>
 </head>
@@ -135,29 +187,32 @@
           <h3>Michelle Appleton</h3>
           <small>28 Jun 2020</small>
         </div>
-          <div class="speech-bubble">
-            <p>Share</p>
-            <img src="./images/icon-facebook.svg" alt="icon-facebook">
-            <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
-            <img src="./images/icon-twitter.svg" alt="icon-twitter">
-          </div>
-          <div class="share">
+          <div class="share" id="share">
             <img onclick="shareIcon()" src="./images/icon-share.svg" alt="share icon">
           </div>
       </div>
+      <div class="speech-bubble" id="speech-bubble">
+        <p>Share</p>
+        <img src="./images/icon-facebook.svg" alt="icon-facebook">
+        <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+        <img src="./images/icon-twitter.svg" alt="icon-twitter">
+      </div>
     </div>
   </div>
-
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
 <script>
     function shareIcon() {
-      document.getElementById("demo").innerHTML = Date();
-    }
-
+      let x = document.getElementById("speech-bubble");
+        if (x.style.display === "none") {
+          x.style.display = "flex";
+        } else {
+          x.style.display = "none";
+        }
+      }
 </script>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
